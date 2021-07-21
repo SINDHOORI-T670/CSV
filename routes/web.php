@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/list/csv_data','csvController@index')->name('csvs');
+Route::get('/upload/csv','csvController@addcsv');
+Route::post('/store/csv/data','csvController@uploadcsvdata');
