@@ -73,7 +73,7 @@ class csvController extends Controller
                 Mail::send('emails.validationmail', ['errors' => $errors], function ($m) use ($errors) {
                     $m->from('sindhooritavm@gmail.com', 'Validation Mail');
         
-                    $m->to('sindhooritavm@gmail.com', 'Charush')->subject('Listing of validation erros for CSV import');
+                    $m->to('charush@accubits.com', 'Charush')->subject('Listing of validation erros for CSV import');
                 });
                 return redirect()->back()->with('error','Something went wrong,please check the mail');
             }else{
