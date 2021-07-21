@@ -4,6 +4,8 @@
     <title>Machine Test</title>
   </head>
   <body>
+    <a href="{{url('/upload/csv')}}">Import CSV</a>
+    <br>
     <table class="table">
         <thead>
             <tr>

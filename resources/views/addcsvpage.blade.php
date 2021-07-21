@@ -4,10 +4,11 @@
     <title>Machine Test</title>
   </head>
   <body>
+    <a href="{{url('/list/csv_data')}}">Back</a>
      <!-- Message -->
-     @if(Session::has('message'))
-        <p >{{ Session::get('message') }}</p>
-     @endif
+     @if(Session::has('error'))
+        <p style="Color:red;">{{ Session::get('error') }}</p>
+    @endif
 
      <!-- Form -->
      <form method='post' action="{{url('/store/csv/data')}}" enctype='multipart/form-data' >
